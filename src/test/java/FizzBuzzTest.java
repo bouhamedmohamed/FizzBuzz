@@ -12,4 +12,10 @@ public class FizzBuzzTest {
         final FizzBuzz fizzBuzz = new FizzBuzz();
         assertEquals("",fizzBuzz.calculateThePlay(""));
     }
+    @Test
+    public void should_return_1_when_send_1() {
+
+        final FizzBuzz fizzBuzz = new FizzBuzz();
+        assertEquals("1",fizzBuzz.calculateThePlay("1"));
+    }
 }
