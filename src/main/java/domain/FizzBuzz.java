@@ -1,8 +1,8 @@
 package domain;
 
 public class FizzBuzz {
-    
-    
+
+
     public String calculateThePlay(String playToCalculate) {
         try {
             final int validPlayTocalculate = Integer.parseInt(playToCalculate);
@@ -17,7 +17,12 @@ public class FizzBuzz {
         return playToCalculate;
     }
 
-    public String calculateTheGameAfter(int i) {
-        return "";
+    public String calculateTheGameAfter(int games) {
+
+        StringBuilder gameResults = new StringBuilder("");
+        for (int currentGame = 1; currentGame <= games; currentGame++) {
+            gameResults.append(calculateThePlay(String.valueOf(currentGame)) + " ");
+        }
+        return gameResults.toString();
     }
 }
