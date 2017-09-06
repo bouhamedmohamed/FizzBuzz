@@ -5,16 +5,37 @@ public class FizzBuzz {
 
     public String calculateThePlay(String playToCalculate) {
         try {
-            final int validPlayTocalculate = Integer.parseInt(playToCalculate);
-            if (validPlayTocalculate % 15 == 0)
-                return "fizzBuzz";
-            else if (validPlayTocalculate % 3 == 0)
-                return "fizz";
-            else if (validPlayTocalculate % 5 == 0)
-                return "buzz";
+            StringBuilder gameResult = new StringBuilder("");
+            final int validPlayToCalculate = Integer.parseInt(playToCalculate);
+            gameResult.append(isMultipleThree(validPlayToCalculate));
+            gameResult.append(isMultipleFive(validPlayToCalculate));
+            return sendGameResult(playToCalculate, gameResult.toString());
         } catch (NumberFormatException ex) {
+            return playToCalculate;
         }
-        return playToCalculate;
+
+    }
+
+    private String sendGameResult(String playToCalculate, String gameResult) {
+        if (gameResult.isEmpty())
+            return playToCalculate;
+        else
+            return gameResult;
+    }
+
+    private String isMultipleFive(int validPlayToCalculate) {
+        String gameResult = "";
+        if (validPlayToCalculate % 5 == 0) {
+            gameResult = "buzz";
+        }
+        return gameResult;
+    }
+
+    private String isMultipleThree(int validPlayToCalculate) {
+        String gameResult = "";
+        if (validPlayToCalculate % 3 == 0)
+            gameResult = "fizz";
+        return gameResult;
     }
 
     public String calculateTheGameAfter(int games) {

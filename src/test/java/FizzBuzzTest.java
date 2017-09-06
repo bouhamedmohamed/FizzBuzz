@@ -36,6 +36,6 @@ public class FizzBuzzTest {
     public void should_return_fizzBuzz_when_send_15() {
 
         final FizzBuzz fizzBuzz = new FizzBuzz();
-        assertEquals("fizzBuzz", fizzBuzz.calculateThePlay("15"));
+        assertEquals("fizzbuzz", fizzBuzz.calculateThePlay("15"));
     }
 }
