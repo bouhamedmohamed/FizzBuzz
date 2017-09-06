@@ -1,6 +1,8 @@
 package domain;
 
 public class FizzBuzz {
+    
+    
     public String calculateThePlay(String playToCalculate) {
         try {
             final int validPlayTocalculate = Integer.parseInt(playToCalculate);
@@ -13,5 +15,9 @@ public class FizzBuzz {
         } catch (NumberFormatException ex) {
         }
         return playToCalculate;
+    }
+
+    public String calculateTheGameAfter(int i) {
+        return "";
     }
 }
